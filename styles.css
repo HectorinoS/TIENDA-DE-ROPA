@@ -39,7 +39,7 @@ nav ul {
 }
 
 nav li {
-    margin: 0 15px;
+    margin: 0 px;
 }
 
 nav a {
@@ -154,5 +154,99 @@ nav a:hover {
 
     .product {
         flex: 1 1 100%;
+    }
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1000px; /* Ajusta el ancho máximo según sea necesario */
+    margin: 0 auto;
+}
+
+.carousel-slide {
+    flex: 0 0 auto;
+    width: 100%;
+    display: none; /* Inicialmente ocultamos todas las diapositivas */
+}
+
+.carousel-slide.active {
+    display: block; /* Mostramos solo la diapositiva activa */
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.modal {
+    display: none; /* Por defecto, el modal está oculto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    overflow: auto;
+    padding-top: 50px; /* Ajusta el espacio según sea necesario */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ajusta el ancho del modal según sea necesario */
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.product-grid-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between; /* Espacio uniforme entre los productos */
+}
+
+.product {
+    flex: 1 1 calc(30% - 20px); /* Ajuste del ancho de los productos */
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .product {
+        flex: 1 1 calc(50% - 20px); /* Dos productos por fila en dispositivos medianos */
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        flex: 1 1 calc(100% - 20px); /* Un producto por fila en dispositivos pequeños */
     }
 }
