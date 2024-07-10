@@ -190,18 +190,23 @@ nav a:hover {
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
     overflow: auto;
-    padding-top: 50px; /* Ajusta el espacio según sea necesario */
+    padding-top: 10px; /* Ajusta el espacio según sea necesario */
 }
 
 .modal-content {
-    background-color: #fff;
-    margin: auto;
-    padding: 20px;
+    background-color: #fefefe;
+    margin: 3% auto;
+    padding: 10px;
     border: 1px solid #888;
-    width: 80%; /* Ajusta el ancho del modal según sea necesario */
-    max-width: 600px;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
     text-align: center;
-    position: relative;
 }
 
 .close {
@@ -213,11 +218,11 @@ nav a:hover {
     cursor: pointer;
 }
 
+
 .product-grid-horizontal {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between; /* Espacio uniforme entre los productos */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas con ancho igual */
+    gap: 20px; /* Espacio entre productos */
 }
 
 .product {
@@ -249,4 +254,64 @@ nav a:hover {
     .product {
         flex: 1 1 calc(100% - 20px); /* Un producto por fila en dispositivos pequeños */
     }
+}
+
+.modal-content img {
+    max-width: 30%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto; /* Centra la imagen y agrega margen inferior */
+}
+
+button {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 10px 24px; /* Ajusta el padding para cambiar el tamaño del botón */
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px; /* Tamaño de la fuente */
+    margin: 8px 4px; /* Márgenes */
+    transition-duration: 0.4s;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+}
+
+/* Estilo para los selectores */
+select {
+    width: 100%;
+    padding: 1px; /* Ajusta el padding para cambiar el tamaño del selector */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    margin-bottom: 5px;
+    font-size: 10px; /* Tamaño de la fuente */
+}
+/* Estilo para el botón de cerrar */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo para la imagen del producto */
+#productImage {
+    max-width: 60%; /* Ajusta la imagen al ancho máximo del contenedor */
+    height: auto; /* Permite que la altura se ajuste automáticamente según el ancho */
+    margin-bottom: 20px; /* Espacio inferior para separar de otros elementos */
 }

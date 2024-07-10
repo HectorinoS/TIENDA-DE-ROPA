@@ -28,19 +28,28 @@
             <div class="carousel">
                 <div class="carousel-slide active"><img src="slider hombre 1.jpg" alt="Slide 1"></div>
                 <div class="carousel-slide"><img src="slider hombre 2.jpg" alt="Slide 2"></div>
-                <div class="carousel-slide"><img src="slider3.jpg" alt="Slide 3"></div>
+                
             </div>
             <!-- Productos dispuestos horizontalmente -->
             <div class="product-grid-horizontal">
-                <div class="product" onclick="openProductModal('Producto Hombre 1', 'Descripción del producto', '100$', ['S', 'M', 'L'], ['Rojo', 'Azul'])">
-                    <img src="producto1.jpg" alt="Producto Hombre 1">
-                    <h3>Producto Hombre 1</h3>
+                <div class="product" onclick="openProductModal('AE 24/7 T-shirt con Gráfico', 'Camisa', '100$', ['S', 'M', 'L'], ['negro'], 'playera hombre.jpg')">
+                    <img src="playera hombre.jpg" alt="Producto Hombre 1">
+                    <h3>AE 24/7 T-shirt con Gráfico</h3>
                     <p>Precio: 100$</p>
                 </div>
+
+
                 <div class="product" onclick="openProductModal('Producto Hombre 2', 'Descripción del producto', '120$', ['S', 'M', 'L'], ['Negro', 'Blanco'])">
                     <img src="producto2.jpg" alt="Producto Hombre 2">
-                    <h3>Producto Hombre 2</h3>
-                    <p>Precio: 120$</p>
+                    
+                </div>
+                <div class="product" onclick="openProductModal('Producto Hombre 3', 'Descripción del producto', '120$', ['S', 'M', 'L'], ['Negro', 'Blanco'])">
+                    <img src="producto2.jpg" alt="Producto Hombre 2">
+                    
+                </div>
+                <div class="product" onclick="openProductModal('Producto Hombre 4', 'Descripción del producto', '120$', ['S', 'M', 'L'], ['Negro', 'Blanco'])">
+                    <img src="producto2.jpg" alt="Producto Hombre 2">
+                    
                 </div>
                 <!-- Agrega más productos aquí -->
             </div>
@@ -57,21 +66,22 @@
         </nav>
     </footer>
 
-    <!-- Modal de Producto -->
-    <div id="product-modal" class="modal" style="display: none;">
-        <div class="modal-content">
-            <span class="close" onclick="closeProductModal()">&times;</span>
-            <h3 id="product-name"></h3>
-            <img id="product-image" src="" alt="Producto">
-            <p id="product-description"></p>
-            <p id="product-price"></p>
-            <label for="size">Talla:</label>
-            <select id="product-size"></select>
-            <label for="color">Color:</label>
-            <select id="product-color"></select>
-            <button onclick="addToCart()">Agregar al Carrito</button>
-        </div>
+    <!-- Modal para mostrar detalles del producto -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeProductModal()">&times;</span>
+        <img id="productImage" src="" alt="Imagen del Producto">
+        <h2 id="productTitle">Título del Producto</h2>
+        <p id="productDescription">Descripción del Producto</p>
+        <p id="productPrice">Precio: </p>
+        <label for="productSize">Talla:</label>
+        <select id="productSize"></select>
+        <label for="productColor">Color:</label>
+        <select id="productColor"></select>
+        <button onclick="addToCart()">Agregar al Carrito</button>
     </div>
+</div>
+
 
     <!-- Enlaza el archivo JavaScript -->
     <script src="scripts.js"></script>
