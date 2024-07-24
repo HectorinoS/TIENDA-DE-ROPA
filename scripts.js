@@ -1,21 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Inicializar el slider
     const slides = document.querySelectorAll('.carousel-slide');
+    const wrapper = document.querySelector('.carousel-wrapper');
     let currentIndex = 0;
+    const totalSlides = slides.length;
 
     const showSlide = (index) => {
-        slides.forEach((slide, i) => {
-            slide.style.display = i === index ? 'block' : 'none';
-        });
+        const offset = -index * 100; // Desplazamiento en porcentaje
+        wrapper.style.transform = `translateX(${offset}%)`;
     };
 
     const nextSlide = () => {
-        currentIndex = (currentIndex + 1) % slides.length;
+        currentIndex = (currentIndex + 1) % totalSlides;
         showSlide(currentIndex);
     };
 
     setInterval(nextSlide, 3000); // Cambia de imagen cada 3 segundos
 
-    showSlide(currentIndex);
+    showSlide(currentIndex); // Muestra la primera diapositiva
+
+    // Inicializar el modal
+    const modal = document.getElementById('productModal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
 });
 
 function openProductModal(title, description, price, sizes, colors, imageSrc) {
@@ -48,7 +56,16 @@ function openProductModal(title, description, price, sizes, colors, imageSrc) {
 
 function closeProductModal() {
     const modal = document.getElementById('productModal');
-    modal.style.display = 'none';
+    if (modal) {
+        modal.style.display = 'none';
+        // Opcional: Limpia el contenido del modal
+        document.getElementById('productImage').src = '';
+        document.getElementById('productTitle').innerText = '';
+        document.getElementById('productDescription').innerText = '';
+        document.getElementById('productPrice').innerText = '';
+        document.getElementById('productSize').innerHTML = '';
+        document.getElementById('productColor').innerHTML = '';
+    }
 }
 
 function addToCart() {

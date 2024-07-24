@@ -157,25 +157,39 @@ nav a:hover {
     }
 }
 
+/* Contenedor del slider */
 .carousel {
+    display: flex;
+    overflow: hidden;
     width: 100%;
     max-width: 1000px; /* Ajusta el ancho máximo según sea necesario */
+    height: 400px; /* Altura fija del slider */
     margin: 0 auto;
+    position: relative;
+    margin-bottom: 40px; /* Espacio debajo del slider */
 }
+
+/* Wrapper de las diapositivas */
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out; /* Transición suave para el cambio */
+}
+
+/* Cada diapositiva del slider */
 .carousel-slide {
-    flex: 0 0 auto;
-    width: 100%;
-    display: none; /* Inicialmente ocultamos todas las diapositivas */
+    flex: 0 0 100%; /* Cada diapositiva ocupa el 100% del contenedor */
+    height: 100%; /* Altura completa del contenedor */
 }
 
-.carousel-slide.active {
-    display: block; /* Mostramos solo la diapositiva activa */
-}
-
+/* Imágenes dentro del slider */
 .carousel-slide img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Ajusta el ancho de la imagen al contenedor */
+    height: 100%; /* Ajusta la altura de la imagen al contenedor */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsión */
+    display: block;
 }
+
+
 
 .modal {
     display: none; /* Por defecto, el modal está oculto */
@@ -190,29 +204,42 @@ nav a:hover {
     padding-top: 10px; /* Ajusta el espacio según sea necesario */
 }
 
-.modal-content {
-    background-color: #fefefe;
-    margin: 3% auto;
-    padding: 10px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 400px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 60px;
+.modal {
+    display: none; /* Oculta el modal por defecto */
+    position: fixed; /* Posición fija en la pantalla */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra horizontalmente */
-    justify-content: center; /* Centra verticalmente */
-    text-align: center;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+}
+/* Contenido del modal */
+.modal-content {
+    position: relative; /* Posición relativa para ajustar los elementos internos */
+    margin: 2% auto; /* Centramos el contenido con un margen automático */
+    padding: 20px;
+    width: 80%; /* Ancho del modal */
+    max-width: 600px; /* Ancho máximo */
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
+
+/* Botón para cerrar el modal */
 .close {
     position: absolute;
     top: 10px;
-    right: 20px;
+    right: 10px;
     font-size: 24px;
     cursor: pointer;
 }
+
+
 
 
 .product-grid-horizontal {
@@ -223,11 +250,12 @@ nav a:hover {
 
 .product {
     background-color: #fff;
-    padding: 10px;
+    padding: 20px; /* Espacio interno */
     border: 1px solid #ddd;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     text-align: center;
-    transition: transform 0.3s ease;
-    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product img {
@@ -258,32 +286,74 @@ nav a:hover {
     margin: 0 auto 20px auto; /* Centra la imagen y agrega margen inferior */
 }
 
+/* Estilo para el botón de agregar al carrito */
 button {
-    background-color: #4CAF50; /* Verde */
+    background-color: #626970; /* Color del botón */
     color: white;
-    padding: 10px 24px; /* Ajusta el padding para cambiar el tamaño del botón */
+    padding: 12px 20px; /* Tamaño del botón */
     border: none;
+    border-radius: 6px; /* Bordes redondeados */
     cursor: pointer;
     text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 15px; /* Tamaño de la fuente */
-    margin: 8px 4px; /* Márgenes */
-    transition-duration: 0.4s;
-    border-radius: 4px;
+    font-size: 16px; /* Tamaño de la fuente */
+    margin-top: 15px; /* Espacio superior */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
 }
 
 button:hover {
-    background-color: white;
-    color: black;
-    border: 2px solid #4CAF50;
+    background-color: #bdbdbd; /* Color más oscuro en hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
 }
 
-/* Estilo para los selectores */
+button:active {
+    background-color: #9fb4c9; /* Color de fondo al hacer clic */
+    transform: translateY(0); /* Eliminación de la elevación */
+}
+
+button:focus {
+    outline: none; /* Eliminación del contorno predeterminado */
+    box-shadow: 0 0 0 3px rgba(199, 207, 215, 0.5); /* Resalta el botón en el foco */
+}
+
 select {
+    width: 100%; /* Ajusta el ancho del select al contenedor */
+    padding: 12px 15px; /* Espaciado interno */
+    border: 1px solid #ddd; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo gris claro */
+    font-size: 16px; /* Tamaño de fuente */
+    margin-bottom: 15px; /* Espacio inferior entre selects */
+    appearance: none; /* Elimina el estilo predeterminado del navegador */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
+}
+
+/* Estilo para la flecha del select */
+select::-ms-expand {
+    display: none; /* Elimina la flecha de los selectores en IE */
+}
+
+
+/* Estilo para la flecha del select */
+select::-ms-expand {
+    display: none; /* Elimina la flecha de los selectores en IE */
+}
+
+/* Contenedor para la flecha personalizada */
+.select-container {
+    position: relative;
+    display: inline-block;
     width: 100%;
 }
+
+
+
+
 /* Estilo para el botón de cerrar */
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
 .close {
     color: #aaa;
     float: right;
@@ -300,7 +370,26 @@ select {
 
 /* Estilo para la imagen del producto */
 #productImage {
-    max-width: 60%; /* Ajusta la imagen al ancho máximo del contenedor */
-    height: auto; /* Permite que la altura se ajuste automáticamente según el ancho */
-    margin-bottom: 20px; /* Espacio inferior para separar de otros elementos */
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados en la imagen */
 }
+
+#productTitle {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
+}
+
+#productDescription {
+    font-size: 1em;
+    margin: 10px 0;
+    color: #666;
+}
+
+#productPrice {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+

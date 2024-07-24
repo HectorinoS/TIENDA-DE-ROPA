@@ -26,10 +26,13 @@
             <h2>Ropa para Hombre</h2>
             <!-- Slider y productos -->
             <div class="carousel">
-                <div class="carousel-slide active"><img src="slider hombre 1.jpg" alt="Slide 1"></div>
-                <div class="carousel-slide"><img src="slider hombre 2.jpg" alt="Slide 2"></div>
-                
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide"><img src="slider hombre 1.jpg" alt="Slide 1"></div>
+                    <div class="carousel-slide"><img src="slider hombre 2.jpg" alt="Slide 2"></div>
+                    <!-- Agrega más diapositivas aquí -->
+                </div>
             </div>
+            
             <!-- Productos dispuestos horizontalmente -->
             <div class="product-grid-horizontal">
                 <div class="product" onclick="openProductModal('AE 24/7 T-shirt con Gráfico', 'Camisa', '100$', ['S', 'M', 'L'], ['negro'], 'playera hombre.jpg')">
@@ -66,7 +69,7 @@
         </nav>
     </footer>
 
-    <!-- Modal para mostrar detalles del producto -->
+  <!-- Modal para mostrar detalles del producto -->
 <div id="productModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeProductModal()">&times;</span>
@@ -74,13 +77,22 @@
         <h2 id="productTitle">Título del Producto</h2>
         <p id="productDescription">Descripción del Producto</p>
         <p id="productPrice">Precio: </p>
-        <label for="productSize">Talla:</label>
-        <select id="productSize"></select>
-        <label for="productColor">Color:</label>
-        <select id="productColor"></select>
+
+        <div class="select-container">
+            <label for="productSize">Talla:</label>
+            <select id="productSize"></select>
+        </div>
+
+        <div class="select-container">
+            <label for="productColor">Color:</label>
+            <select id="productColor"></select>
+        </div>
+
         <button onclick="addToCart()">Agregar al Carrito</button>
     </div>
 </div>
+
+
 
 
     <!-- Enlaza el archivo JavaScript -->
