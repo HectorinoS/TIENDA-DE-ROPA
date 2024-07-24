@@ -158,13 +158,10 @@ nav a:hover {
 }
 
 .carousel {
-    display: flex;
-    overflow: hidden;
     width: 100%;
     max-width: 1000px; /* Ajusta el ancho máximo según sea necesario */
     margin: 0 auto;
 }
-
 .carousel-slide {
     flex: 0 0 auto;
     width: 100%;
@@ -214,7 +211,6 @@ nav a:hover {
     top: 10px;
     right: 20px;
     font-size: 24px;
-    font-weight: bold;
     cursor: pointer;
 }
 
@@ -226,7 +222,6 @@ nav a:hover {
 }
 
 .product {
-    flex: 1 1 calc(30% - 20px); /* Ajuste del ancho de los productos */
     background-color: #fff;
     padding: 10px;
     border: 1px solid #ddd;
@@ -287,12 +282,6 @@ button:hover {
 /* Estilo para los selectores */
 select {
     width: 100%;
-    padding: 1px; /* Ajusta el padding para cambiar el tamaño del selector */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: white;
-    margin-bottom: 5px;
-    font-size: 10px; /* Tamaño de la fuente */
 }
 /* Estilo para el botón de cerrar */
 .close {
