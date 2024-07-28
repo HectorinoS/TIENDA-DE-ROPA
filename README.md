@@ -75,17 +75,11 @@ A continuación se presentan algunas capturas de pantalla de la tienda:
 
 ![Captura de Pantalla 1](CAPTURA1.png)
 
-![Captura de Pantalla ] (CAPTURA 1.png)
+![Captura de Pantalla 1](CAPTURA2.png)
 
-![Captura de Pantalla ](CAPTURA 2.png)
+![Captura de Pantalla 1](CAPTURA3.png)
 
-![Captura de Pantalla ](CAPTURA 3.png)
-
-![Captura de Pantalla ](CAPTURA 4.png)
-
-
-
-
+![Captura de Pantalla 1](CAPTURA4.png)
 ## Créditos
 
 Este proyecto fue desarrollado por [Hector FlamintHot/Citlalli Z] como parte de un proyecto personal/educativo. Agradecimientos especiales a [Andres Luna (Profesor Software].
