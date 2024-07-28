@@ -78,7 +78,7 @@ A continuación se presentan algunas capturas de pantalla de la tienda:
 
 ## Créditos
 
-Este proyecto fue desarrollado por [Tu Nombre] como parte de un proyecto personal/educativo. Agradecimientos especiales a [nombre de colaboradores, recursos, etc.].
+Este proyecto fue desarrollado por [Hector FlamintHot/Citlalli Z] como parte de un proyecto personal/educativo. Agradecimientos especiales a [Andres Luna (Profesor Software].
 
 ## Changelog
 
