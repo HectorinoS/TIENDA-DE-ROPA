@@ -74,9 +74,13 @@ Para cualquier consulta, puedes contactarnos en (terracraftelcrack@gmail.com).
 A continuación se presentan algunas capturas de pantalla de la tienda:
 
 ![Captura de Pantalla ](CAPTURA 1.png)
+
 ![Captura de Pantalla ](CAPTURA 2.png)
+
 ![Captura de Pantalla ](CAPTURA 3.png)
+
 ![Captura de Pantalla ](CAPTURA 4.png)
+
 
 
 
