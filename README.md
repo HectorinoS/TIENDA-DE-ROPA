@@ -16,7 +16,7 @@ El proyecto está organizado de la siguiente manera:
 - `index.html`: La página principal que contiene el carrusel de imágenes y los productos destacados.
 - `styles.css`: La hoja de estilos para toda la tienda.
 - `scripts.js`: Los scripts de JavaScript que manejan la funcionalidad del carrusel y otras interacciones.
-- `images/`:imágenes utilizadas en la tienda.
+- `images`:imágenes utilizadas en la tienda.
 
 ## Instalación
 
