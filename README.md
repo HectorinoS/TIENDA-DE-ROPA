@@ -67,7 +67,7 @@ Si deseas contribuir a este proyecto, por favor sigue estos pasos:
 
 ## Contacto
 
-Para cualquier consulta, puedes contactarnos en [correo@example.com](terracraftelcrack@gmail.com).
+Para cualquier consulta, puedes contactarnos en (terracraftelcrack@gmail.com).
 
 ## Capturas de Pantalla
 
