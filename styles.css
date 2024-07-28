@@ -285,7 +285,6 @@ nav a:hover {
     display: block;
     margin: 0 auto 20px auto; /* Centra la imagen y agrega margen inferior */
 }
-
 /* Estilo para el botón de agregar al carrito */
 button {
     background-color: #626970; /* Color del botón */

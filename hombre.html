@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ropa para Hombre - H&C</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="description" content="Ropa para hombre en H&C">
     <meta name="keywords" content="ropa para hombre, moda, hombre, compras">
@@ -46,28 +45,12 @@
                     <img src="producto2.jpg" alt="Producto Hombre 2">
                     
                 </div>
-                <div class="product" onclick="openProductModal('Producto Hombre 3', 'Descripción del producto', '120$', ['S', 'M', 'L'], ['Negro', 'Blanco'])">
-                    <img src="producto2.jpg" alt="Producto Hombre 2">
                     
                 </div>
-                <div class="product" onclick="openProductModal('Producto Hombre 4', 'Descripción del producto', '120$', ['S', 'M', 'L'], ['Negro', 'Blanco'])">
-                    <img src="producto2.jpg" alt="Producto Hombre 2">
                     
                 </div>
                 <!-- Agrega más productos aquí -->
             </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; H&C. Todos los derechos reservados.</p>
-        <nav>
-            <ul>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-                <li><a href="#privacidad">Política de Privacidad</a></li>
-            </ul>
-        </nav>
-    </footer>
 
   <!-- Modal para mostrar detalles del producto -->
 <div id="productModal" class="modal">
@@ -81,21 +64,12 @@
         <div class="select-container">
             <label for="productSize">Talla:</label>
             <select id="productSize"></select>
-        </div>
-
-        <div class="select-container">
             <label for="productColor">Color:</label>
             <select id="productColor"></select>
-        </div>
-
         <button onclick="addToCart()">Agregar al Carrito</button>
     </div>
 </div>
 
-
-
-
-    <!-- Enlaza el archivo JavaScript -->
     <script src="scripts.js"></script>
 </body>
 </html>

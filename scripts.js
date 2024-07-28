@@ -56,16 +56,7 @@ function openProductModal(title, description, price, sizes, colors, imageSrc) {
 
 function closeProductModal() {
     const modal = document.getElementById('productModal');
-    if (modal) {
         modal.style.display = 'none';
-        // Opcional: Limpia el contenido del modal
-        document.getElementById('productImage').src = '';
-        document.getElementById('productTitle').innerText = '';
-        document.getElementById('productDescription').innerText = '';
-        document.getElementById('productPrice').innerText = '';
-        document.getElementById('productSize').innerHTML = '';
-        document.getElementById('productColor').innerHTML = '';
-    }
 }
 
 function addToCart() {

@@ -1,0 +1,19 @@
+# Archivos de configuración local
+.env
+
+# Dependencias
+node_modules/
+vendor/
+
+# Archivos generados por el sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos generados por el editor
+*.log
+*.tmp
+*.swp
+
+# Archivos generados por el build
+dist/
+build/
