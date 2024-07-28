@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ropa para Hombre - H&C</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="description" content="Ropa para hombre en H&C">
     <meta name="keywords" content="ropa para hombre, moda, hombre, compras">
@@ -34,41 +35,68 @@
             
             <!-- Productos dispuestos horizontalmente -->
             <div class="product-grid-horizontal">
-                <div class="product" onclick="openProductModal('AE 24/7 T-shirt con Gráfico', 'Camisa', '100$', ['S', 'M', 'L'], ['negro'], 'playera hombre.jpg')">
+                <div class="product" onclick="openProductModal('AE 24/7 T-shirt con Gráfico', 'Camisa', '100$', ['S', 'M', 'L'], ['negro'], 'playera hombre.jpg', ['playera hombre.jpg'])">
                     <img src="playera hombre.jpg" alt="Producto Hombre 1">
                     <h3>AE 24/7 T-shirt con Gráfico</h3>
-                    <p>Precio: 100$</p>
+                    <p>100$</p>
                 </div>
 
+                <div class="product" onclick="openProductModal('BOMBER CON BORDADO CALAVERA NEGRA', 'CHAMARRA', '500$', ['S', 'M', 'L'], ['Negro'], 'chamarra hombre.jpg', ['chamarra hombre.jpg', 'producto2_2.jpg', 'producto2_3.jpg'])">
+                    <img src="chamarra hombre.jpg" alt="Producto Hombre 1">
+                    <h3>BOMBER CON BORDADO CALAVERA NEGRA</h3>
+                    <p>500$</p>
+                </div>
 
-                <div class="product" onclick="openProductModal('Producto Hombre 2', 'Descripción del producto', '120$', ['S', 'M', 'L'], ['Negro', 'Blanco'])">
-                    <img src="producto2.jpg" alt="Producto Hombre 2">
-                    
+                <div class="product" onclick="openProductModal('BOMBER CON BORDADO CALAVERA NEGRA', 'CHAMARRA', '500$', ['S', 'M', 'L'], ['Negro'], 'chamarra hombre.jpg', ['chamarra hombre.jpg', 'producto2_2.jpg', 'producto2_3.jpg'])">
+                    <img src="chamarra hombre.jpg" alt="Producto Hombre 1">
+                    <h3>BOMBER CON BORDADO CALAVERA NEGRA</h3>
+                    <p>500$</p>
                 </div>
-                    
+
+                <div class="product" onclick="openProductModal('AE 24/7 T-shirt con Gráfico', 'Camisa', '100$', ['S', 'M', 'L'], ['negro'], 'playera hombre.jpg', ['playera hombre.jpg'])">
+                    <img src="playera hombre.jpg" alt="Producto Hombre 1">
+                    <h3>AE 24/7 T-shirt con Gráfico</h3>
+                    <p>100$</p>
                 </div>
-                    
+
+                <div class="product" onclick="openProductModal('AE 24/7 T-shirt con Gráfico', 'Camisa', '100$', ['S', 'M', 'L'], ['negro'], 'playera hombre.jpg', ['playera hombre.jpg'])">
+                    <img src="playera hombre.jpg" alt="Producto Hombre 1">
+                    <h3>AE 24/7 T-shirt con Gráfico</h3>
+                    <p>100$</p>
                 </div>
                 <!-- Agrega más productos aquí -->
             </div>
+        </section>
+    </main>
+    <footer>
+      
+        <nav>
+            <ul>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#privacidad">Política de Privacidad</a></li>
+            </ul>
+        </nav>
+    </footer>
 
-  <!-- Modal para mostrar detalles del producto -->
-<div id="productModal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeProductModal()">&times;</span>
-        <img id="productImage" src="" alt="Imagen del Producto">
-        <h2 id="productTitle">Título del Producto</h2>
-        <p id="productDescription">Descripción del Producto</p>
-        <p id="productPrice">Precio: </p>
-
-        <div class="select-container">
+    <!-- Modal de Producto -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProductModal()">&times;</span>
+            <img id="productImage" src="" alt="Imagen del Producto">
+            <div id="productThumbnails" class="thumbnails">
+                <!-- Miniaturas de las imágenes -->
+            </div>
+            <h2 id="productTitle"></h2>
+            <p id="productDescription"></p>
+            <p id="productPrice"></p>
             <label for="productSize">Talla:</label>
             <select id="productSize"></select>
             <label for="productColor">Color:</label>
             <select id="productColor"></select>
-        <button onclick="addToCart()">Agregar al Carrito</button>
+            <button onclick="addToCart()">Agregar al Carrito</button>
+        </div>
     </div>
-</div>
 
     <script src="scripts.js"></script>
 </body>

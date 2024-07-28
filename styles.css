@@ -242,18 +242,14 @@ nav a:hover {
 
 
 
-.product-grid-horizontal {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas con ancho igual */
-    gap: 20px; /* Espacio entre productos */
-}
-
 .product {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
     background-color: #fff;
-    padding: 20px; /* Espacio interno */
+    padding: 20px;
     border: 1px solid #ddd;
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -261,7 +257,48 @@ nav a:hover {
 .product img {
     max-width: 100%;
     height: auto;
+    object-fit: cover;
+    border-radius: 10px; /* Bordes redondeados */
 }
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Hace que este contenedor ocupe el espacio disponible */
+}
+
+.product-title {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product-description {
+    font-size: 0.9em;
+    margin: 10px 0;
+    color: #666;
+}
+
+.product-price {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Ajuste para la vista en fila */
+.product-grid-horizontal {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* Estilos específicos para la vista en fila */
+.product-grid-horizontal .product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Alinea el contenido al inicio y al final */
+}
+
 
 .product:hover {
     transform: scale(1.05);
@@ -283,8 +320,10 @@ nav a:hover {
     max-width: 30%;
     height: auto;
     display: block;
+    border-radius: 10px; /* Bordes redondeados en la imagen */
     margin: 0 auto 20px auto; /* Centra la imagen y agrega margen inferior */
 }
+
 /* Estilo para el botón de agregar al carrito */
 button {
     background-color: #626970; /* Color del botón */
@@ -392,3 +431,21 @@ label {
     color: #333;
 }
 
+.thumbnails {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.thumbnails img {
+    width: 60px;
+    height: 60px;
+    margin: 0 5px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+}
+
+.thumbnails img:hover, .thumbnails img.selected {
+    border: 2px solid #000000;
+}

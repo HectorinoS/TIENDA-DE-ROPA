@@ -26,41 +26,69 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-function openProductModal(title, description, price, sizes, colors, imageSrc) {
+function openProductModal(title, description, price, sizes, colors, mainImage, additionalImages) {
     const modal = document.getElementById('productModal');
-    document.getElementById('productImage').src = imageSrc;
-    document.getElementById('productTitle').innerText = title;
-    document.getElementById('productDescription').innerText = description;
-    document.getElementById('productPrice').innerText = `Precio: ${price}`;
+    const productImage = document.getElementById('productImage');
+    const productTitle = document.getElementById('productTitle');
+    const productDescription = document.getElementById('productDescription');
+    const productPrice = document.getElementById('productPrice');
+    const productSize = document.getElementById('productSize');
+    const productColor = document.getElementById('productColor');
+    const productThumbnails = document.getElementById('productThumbnails');
 
-    const sizeSelect = document.getElementById('productSize');
-    sizeSelect.innerHTML = '';
+    productImage.src = mainImage;
+    productTitle.textContent = title;
+    productDescription.textContent = description;
+    productPrice.textContent = `Precio: ${price}`;
+
+    // Clear previous options and thumbnails
+    productSize.innerHTML = '';
+    productColor.innerHTML = '';
+    productThumbnails.innerHTML = '';
+
+    // Add sizes
     sizes.forEach(size => {
         const option = document.createElement('option');
         option.value = size;
-        option.innerText = size;
-        sizeSelect.appendChild(option);
+        option.textContent = size;
+        productSize.appendChild(option);
     });
 
-    const colorSelect = document.getElementById('productColor');
-    colorSelect.innerHTML = '';
+    // Add colors
     colors.forEach(color => {
         const option = document.createElement('option');
         option.value = color;
-        option.innerText = color;
-        colorSelect.appendChild(option);
+        option.textContent = color;
+        productColor.appendChild(option);
     });
 
-    modal.style.display = 'block';
+    // Add thumbnail images
+    additionalImages.forEach(image => {
+        const img = document.createElement('img');
+        img.src = image;
+        img.alt = title;
+        img.onclick = () => {
+            productImage.src = image;
+            document.querySelectorAll('.thumbnails img').forEach(thumb => thumb.classList.remove('selected'));
+            img.classList.add('selected');
+        };
+        productThumbnails.appendChild(img);
+    });
+
+    // Set the first thumbnail as selected
+    if (productThumbnails.firstChild) {
+        productThumbnails.firstChild.classList.add('selected');
+    }
+
+    modal.style.display = 'flex';
 }
 
 function closeProductModal() {
     const modal = document.getElementById('productModal');
-        modal.style.display = 'none';
+    modal.style.display = 'none';
 }
 
 function addToCart() {
-    // Aquí puedes agregar la lógica para agregar el producto al carrito
+    // Add product to cart logic
     alert('Producto agregado al carrito');
-    closeProductModal();
 }
