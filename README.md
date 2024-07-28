@@ -89,7 +89,8 @@ Este proyecto fue desarrollado por [Hector FlamintHot/Citlalli Z] como parte de 
 ### v1.0.0
 
 - Lanzamiento inicial con funcionalidades básicas de navegación y carrito de compras.
-- Implementación del carrusel de imágenes en la página principal.
+- Implementación del carrusel de imágenes.
+- Sistema de visualizacion del producto.
 
 ### Roadmap
 
