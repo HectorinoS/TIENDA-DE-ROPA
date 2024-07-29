@@ -219,6 +219,7 @@ footer {
     z-index: 1000; /* Asegura que esté por encima de otros elementos */
     display: flex;
     align-items: center; /* Centra verticalmente el contenido */
+    z-index: 1000;
     justify-content: center; /* Centra horizontalmente el contenido */
 }
 /* Contenido del modal */
@@ -246,14 +247,14 @@ footer {
 
 .product {
     display: flex;
-    flex-direction: column; /* Alinea los elementos verticalmente */
-    background-color: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 80%; /* Ajusta el ancho según tus necesidades */
+    max-width: 500px; /* Limita el ancho máximo del producto */
+    text-align: center; /* Alinea el texto en el centro */
 }
 
 .product img {
@@ -536,5 +537,53 @@ label {
 .cart-icon img:hover {
     opacity: 0.8;
 }
+
+.notification {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Posición fija */
+    top: 10px; /* Distancia desde el borde superior */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translateX(-50%); /* Corrección para centrar */
+    background-color: #2e352e; /* Color de fondo verde */
+    color: white; /* Color del texto */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    z-index: 1001; /* Asegurarse de que esté por encima del modal */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-family: Arial, sans-serif; /* Fuente */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Estilos para el mensaje de confirmación */
+.confirmation-message {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Posición fija */
+    top: 20px; /* Distancia desde el borde superior */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translateX(-50%); /* Corrección para centrar */
+    background-color: #4CAF50; /* Color de fondo verde */
+    color: white; /* Color del texto */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    z-index: 1001; /* Asegurarse de que esté por encima de otros elementos */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-family: Arial, sans-serif; /* Fuente */
+    text-align: center; /* Centrar el texto */
+}
+#cardNumber, #cardExpiry, #cardCVC {
+    display: none; /* Oculta los campos */
+}
+
+#creditCardDetails {
+    display: block; /* Asegúrate de que esté visible cuando sea necesario */
+}
+
+#cartItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Añade un poco de espacio alrededor del contenedor */
+}
+
 
 

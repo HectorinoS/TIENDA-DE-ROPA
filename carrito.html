@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compras - H&C</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="logi2.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -22,49 +23,52 @@
     <main>
         <h1>Carrito de Compras</h1>
         <div id="cartItems"></div>
-        <div id="checkoutButton" style="display: none;">
-            <button onclick="showCheckoutForm()">Proceder al Pago</button>
+        
+        <div id="totalAmount">Total: $0.00</div>
+    
+        <div id="checkoutButtonContainer" style="display: none;">
+            <button id="checkoutButton" onclick="showCheckoutForm()">Proceder al Pago</button>
         </div>
-
+    
         <!-- Formulario de Pago -->
-        <form id="checkoutForm" style="display:none;">
+        <form id="checkoutForm" style="display:none;" onsubmit="proceedToCheckout(); return false;">
             <label for="name">Nombre:</label>
             <input type="text" id="name" required>
-
+    
             <label for="address">Dirección de Envío:</label>
             <input type="text" id="address" required>
-
+    
             <label for="shippingMethod">Tipo de Envío:</label>
             <select id="shippingMethod" required>
                 <option value="standard">Envío Estándar</option>
                 <option value="express">Envío Exprés</option>
             </select>
-
+    
             <label for="paymentMethod">Método de Pago:</label>
             <select id="paymentMethod" required onchange="toggleCreditCardFields()">
                 <option value="creditCard">Tarjeta de Crédito</option>
                 <option value="paypal">PayPal</option>
             </select>
-
-            <div id="creditCardDetails" style="display:none;">
+    
+            <div id="creditCardDetails" style="display: none;">
                 <label for="cardNumber">Número de Tarjeta:</label>
-                <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
-
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+    
                 <label for="cardExpiry">Fecha de Expiración:</label>
-                <input type="text" id="cardExpiry" placeholder="MM/AA" maxlength="5" required>
-
-                <label for="cardCVC">Código de Seguridad:</label>
-                <input type="text" id="cardCVC" placeholder="123" maxlength="3" required>
+                <input type="text" id="cardExpiry" name="cardExpiry" placeholder="MM/AA" maxlength="5" required>
+    
+                <label for="cardCVC">CVC:</label>
+                <input type="text" id="cardCVC" name="cardCVC" placeholder="123" maxlength="3" required>
             </div>
-
+            
             <button type="submit">Confirmar Compra</button>
         </form>
-
+    
         <!-- Mensaje de Confirmación -->
-        <div id="confirmationMessage" style="display:none;">
-            <p>¡Compra realizada con éxito!</p>
-        </div>
+        <div id="confirmationMessage" style="display:none;"></div>
     </main>
+    
+    
     <footer>
         <nav>
             <ul>

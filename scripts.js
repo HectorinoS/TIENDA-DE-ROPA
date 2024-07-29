@@ -95,7 +95,7 @@ function addToCart() {
     const modal = document.getElementById('productModal');
     const productId = modal.dataset.productId;
     const productTitle = document.getElementById('productTitle').textContent;
-    const productPrice = parseFloat(document.getElementById('productPrice').textContent.replace('Precio: ', '').replace('$', ''));
+    const productPrice = parseFloat(document.getElementById('productPrice').textContent.replace('Precio: ', '').replace('$', '').replace(',', ''));
     const productSize = document.getElementById('productSize').value;
     const productColor = document.getElementById('productColor').value;
     const quantity = 1; // Puedes ajustar la cantidad según sea necesario
@@ -118,5 +118,13 @@ function addToCart() {
         cart.push(product);
     }
     localStorage.setItem('cart', JSON.stringify(cart));
-    alert('Producto agregado al carrito');
+
+    // Mostrar el mensaje de notificación
+    const notification = document.getElementById('notification');
+    if (notification) {
+        notification.style.display = 'block';
+        setTimeout(() => {
+            notification.style.display = 'none';
+        }, 3000); // Ocultar el mensaje después de 3 segundos
+    }
 }

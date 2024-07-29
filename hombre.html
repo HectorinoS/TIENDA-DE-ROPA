@@ -9,10 +9,8 @@
     <meta name="keywords" content="ropa para hombre, moda, hombre, compras">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="logi2.ico" type="image/x-icon">
-
 </head>
 <body>
-
     <header>
         <a href="carrito.html" class="cart-icon">
             <img src="carrito icon.png" alt="">
@@ -20,7 +18,6 @@
         <img src="logo 2.png" alt="Logo de la Tienda" class="logo">
     </header>
     <nav>
-
         <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="hombre.html">Hombre</a></li>
@@ -43,32 +40,32 @@
             
             <!-- Productos dispuestos horizontalmente -->
             <div class="product-grid-horizontal">
-                <div class="product" onclick="openProductModal('AE 24/7 T-shirt con Gráfico', 'Camisa', '100$', ['S', 'M', 'L'], ['negro'], 'playera hombre.jpg', ['playera hombre.jpg'])">
+                <div class="product" onclick="openProductModal('AE 24/7 T-shirt con Gráfico', 'Camisa', '250$', ['S', 'M', 'L'], ['NEGRO'], 'playera hombre.jpg', ['playera hombre.jpg'], 1)">
                     <img src="playera hombre.jpg" alt="Producto Hombre 1">
                     <h3>AE 24/7 T-shirt con Gráfico</h3>
-                    <p>100$</p>
+                    <p>250$</p>
                 </div>
 
-                <div class="product" onclick="openProductModal('BOMBER CON BORDADO CALAVERA NEGRA', 'CHAMARRA', '500$', ['S', 'M', 'L'], ['Negro'], 'chamarra hombre.jpg', ['chamarra hombre.jpg', 'producto2_2.jpg', 'producto2_3.jpg'])">
-                    <img src="chamarra hombre.jpg" alt="Producto Hombre 1">
+                <div class="product" onclick="openProductModal('Nike Air Force 1 Le Gs Triple White', 'Tenis', '1500$', ['8', '9', '10'], ['BLANCO'], 'tenis hombre.jpg', ['tenis hombre.jpg', 'tenis hombre1.2.jpg', 'tenis hombre1.jpg'], 2)">
+                    <img src="tenis hombre.jpg" alt="Producto Hombre 2">
+                    <h3>Tenis Nike Air Force 1 Le Gs Triple White</h3>
+                    <p>$1,500</p>
+                </div>
+
+                <div class="product" onclick="openProductModal('BOMBER CON BORDADO CALAVERA NEGRA', 'Chamarra', '500$', ['S', 'M', 'L'], ['NEGRO'], 'chamarra hombre.jpg', ['chamarra hombre.jpg'], 3)">
+                    <img src="chamarra hombre.jpg" alt="Producto Hombre 3">
                     <h3>BOMBER CON BORDADO CALAVERA NEGRA</h3>
                     <p>500$</p>
                 </div>
 
-                <div class="product" onclick="openProductModal('BOMBER CON BORDADO CALAVERA NEGRA', 'CHAMARRA', '500$', ['S', 'M', 'L'], ['Negro'], 'chamarra hombre.jpg', ['chamarra hombre.jpg', 'producto2_2.jpg', 'producto2_3.jpg'])">
-                    <img src="chamarra hombre.jpg" alt="Producto Hombre 1">
-                    <h3>BOMBER CON BORDADO CALAVERA NEGRA</h3>
-                    <p>500$</p>
+                <div class="product" onclick="openProductModal('Adidas Classic Solid 3 Pares', 'Calcetas', '300$', ['CH', 'M', 'G'], ['BLANCO'], 'calcetas hombre.jpg', ['calcetas hombre.jpg', 'calcetas hombre1.jpg', 'calcetas hombre2.jpg'], 4)">
+                    <img src="calcetas hombre.jpg" alt="Producto Hombre 4">
+                    <h3>Calcetines Adidas Classic Solid 3 Pares</h3>
+                    <p>300$</p>
                 </div>
 
-                <div class="product" onclick="openProductModal('AE 24/7 T-shirt con Gráfico', 'Camisa', '100$', ['S', 'M', 'L'], ['negro'], 'playera hombre.jpg', ['playera hombre.jpg'])">
-                    <img src="playera hombre.jpg" alt="Producto Hombre 1">
-                    <h3>AE 24/7 T-shirt con Gráfico</h3>
-                    <p>100$</p>
-                </div>
-
-                <div class="product" onclick="openProductModal('AE 24/7 T-shirt con Gráfico', 'Camisa', '100$', ['S', 'M', 'L'], ['negro'], 'playera hombre.jpg', ['playera hombre.jpg'])">
-                    <img src="playera hombre.jpg" alt="Producto Hombre 1">
+                <div class="product" onclick="openProductModal('AE 24/7 T-shirt con Gráfico', 'Camisa', '100$', ['S', 'M', 'L'], ['NEGRO'], 'playera hombre.jpg', ['playera hombre.jpg'], 5)">
+                    <img src="playera hombre.jpg" alt="Producto Hombre 5">
                     <h3>AE 24/7 T-shirt con Gráfico</h3>
                     <p>100$</p>
                 </div>
@@ -76,6 +73,9 @@
             </div>
         </section>
     </main>
+    <!-- Mensaje de Producto Agregado -->
+<div id="notification" class="notification" style="display: none;">Producto agregado al carrito</div>
+
     <!-- Pie de página -->
     <footer>
         <nav>

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const confirmationMessage = document.getElementById('confirmationMessage');
     const paymentMethodSelect = document.getElementById('paymentMethod');
     const creditCardDetails = document.getElementById('creditCardDetails');
-
+    
     // Manejo del cambio en el método de pago
     paymentMethodSelect.addEventListener('change', (event) => {
         if (event.target.value === 'creditCard') {
@@ -24,8 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.removeItem('cart');
 
             // Mostrar el mensaje de confirmación
-            form.style.display = 'none';
+            confirmationMessage.textContent = 'Compra confirmada. ¡Gracias por tu compra!';
             confirmationMessage.style.display = 'block';
+            setTimeout(() => {
+                confirmationMessage.style.display = 'none';
+            }, 5000); // Ocultar el mensaje después de 5 segundos
         });
     }
 });
