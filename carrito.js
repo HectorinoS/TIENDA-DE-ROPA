@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const checkoutButton = document.getElementById('checkoutButton');
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    console.log('Contenido del carrito desde localStorage:', cart);
-
     if (cart.length === 0) {
         cartItems.innerHTML = '<p>El carrito está vacío.</p>';
     } else {
@@ -30,16 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Función para eliminar un producto del carrito
 function removeFromCart(productId) {
-    console.log('Intentando eliminar producto con ID:', productId);
-
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    console.log('Carrito antes de eliminar:', cart);
-
     cart = cart.filter(item => item.id !== productId);
-    console.log('Carrito después de eliminar:', cart);
-
     localStorage.setItem('cart', JSON.stringify(cart));
     location.reload(); // Recargar la página para actualizar la vista
 }

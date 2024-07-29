@@ -4,11 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const paymentMethodSelect = document.getElementById('paymentMethod');
     const creditCardDetails = document.getElementById('creditCardDetails');
 
-    // Mostrar el formulario de pago
-    window.showCheckoutForm = function() {
-        form.style.display = 'block';
-    };
-
     // Manejo del cambio en el método de pago
     paymentMethodSelect.addEventListener('change', (event) => {
         if (event.target.value === 'creditCard') {

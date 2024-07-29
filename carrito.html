@@ -22,7 +22,6 @@
     <main>
         <h1>Carrito de Compras</h1>
         <div id="cartItems"></div>
-        <!-- Botón de proceder al pago oculto por defecto -->
         <div id="checkoutButton" style="display: none;">
             <button onclick="showCheckoutForm()">Proceder al Pago</button>
         </div>
@@ -47,7 +46,6 @@
                 <option value="paypal">PayPal</option>
             </select>
 
-            <!-- Información de la tarjeta de crédito -->
             <div id="creditCardDetails" style="display:none;">
                 <label for="cardNumber">Número de Tarjeta:</label>
                 <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
