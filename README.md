@@ -16,7 +16,7 @@ El proyecto está organizado de la siguiente manera:
 - `index.html`: La página principal que contiene el carrusel de imágenes y los productos destacados.
 - `styles.css`: La hoja de estilos para toda la tienda.
 - `scripts.js`: Los scripts de JavaScript que manejan la funcionalidad del carrusel y otras interacciones.
-- `images/`:imágenes utilizadas en la tienda.
+- `images`:imágenes utilizadas en la tienda.
 
 ## Instalación
 
@@ -72,29 +72,25 @@ Para cualquier consulta, puedes contactarnos en (terracraftelcrack@gmail.com).
 ## Capturas de Pantalla
 
 A continuación se presentan algunas capturas de pantalla de la tienda:
-![Captura de Pantalla 1](images/CAPTURA 1.png)
 
-![Captura de Pantalla ] (CAPTURA 1.png)
+![Captura de Pantalla 1](CAPTURA1.png)
 
-![Captura de Pantalla ](CAPTURA 2.png)
+![Captura de Pantalla 1](CAPTURA2.png)
 
-![Captura de Pantalla ](CAPTURA 3.png)
+![Captura de Pantalla 1](CAPTURA3.png)
 
-![Captura de Pantalla ](CAPTURA 4.png)
-
-
-
-
+![Captura de Pantalla 1](CAPTURA4.png)
 ## Créditos
 
-Este proyecto fue desarrollado por [Hector FlamintHot/Citlalli Z] como parte de un proyecto personal/educativo. Agradecimientos especiales a [Andres Luna (Profesor Software].
+Este proyecto fue desarrollado por [Hector FlamintHot/Citlalli Z] como parte de un proyecto personal/educativo. Agradecimientos especiales a [Andres Luna (Profesor Software).
 
 ## Changelog
 
 ### v1.0.0
 
 - Lanzamiento inicial con funcionalidades básicas de navegación y carrito de compras.
-- Implementación del carrusel de imágenes en la página principal.
+- Implementación del carrusel de imágenes.
+- Sistema de visualizacion del producto.
 
 ### Roadmap
 
