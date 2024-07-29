@@ -62,11 +62,6 @@ nav a:hover {
     padding: 20px;
 }
 
-.product-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
 
 .product {
     flex: 1 1 calc(50% - 20px);
@@ -202,17 +197,6 @@ nav a:hover {
     z-index: 1000;
     overflow: auto;
     padding-top: 10px; /* Ajusta el espacio según sea necesario */
-}
-
-.modal {
-    display: none; /* Oculta el modal por defecto */
-    position: fixed; /* Posición fija en la pantalla */
-    left: 0;
-    top: 0;
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Altura completa */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
     display: flex;
     align-items: center; /* Centra verticalmente el contenido */
     justify-content: center; /* Centra horizontalmente el contenido */
@@ -229,7 +213,6 @@ nav a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
 }
 
-
 /* Botón para cerrar el modal */
 .close {
     position: absolute;
@@ -238,7 +221,6 @@ nav a:hover {
     font-size: 24px;
     cursor: pointer;
 }
-
 
 
 
@@ -298,7 +280,6 @@ nav a:hover {
     flex-direction: column;
     justify-content: space-between; /* Alinea el contenido al inicio y al final */
 }
-
 
 .product:hover {
     transform: scale(1.05);
@@ -371,7 +352,6 @@ select::-ms-expand {
     display: none; /* Elimina la flecha de los selectores en IE */
 }
 
-
 /* Estilo para la flecha del select */
 select::-ms-expand {
     display: none; /* Elimina la flecha de los selectores en IE */
@@ -386,24 +366,10 @@ select::-ms-expand {
 
 
 
-
 /* Estilo para el botón de cerrar */
 label {
     display: block;
     margin: 10px 0 5px;
-}
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
 }
 
 /* Estilo para la imagen del producto */
