@@ -3,39 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ofertas - H&C</title>
+    <title>Ropa para Mujer - H&C</title>
     <link rel="stylesheet" href="styles.css">
-    <meta name="description" content="Ofertas en H&C">
-    <meta name="keywords" content="ofertas, moda, compras">
+    <meta name="description" content="Ropa para mujer en H&C">
+    <meta name="keywords" content="ropa para mujer, moda, mujer, compras">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="logi2.ico" type="image/x-icon">
+
 </head>
 <body>
     <header>
+        <a href="carrito.html" class="cart-icon">
+            <img src="carrito icon.png" alt="">
+        </a>
         <img src="logo 2.png" alt="Logo de la Tienda" class="logo">
     </header>
     <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
+            <li><a href="hombre.html">Hombre</a></li>
             <li><a href="mujer.html">Mujer</a></li>
             <li><a href="novedades.html">Novedades</a></li>
+            <li><a href="ofertas.html">Ofertas</a></li>
         </ul>
     </nav>
     <main class="container">
         <section class="section">
             <h2>Ofertas</h2>
-            <div class="product-grid">
-                <div class="product">
-                    <img src="slader1.jpg" alt="Oferta 1">
-                    <h3>Nombre del Producto</h3>
-                    <p>Descripción del producto</p>
-                    <p>Precio</p>
+            <!-- Slider y productos -->
+            <div class="carousel">
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide"><img src="slider_mujer_1.jpg" alt="Slide 1"></div>
+                    <div class="carousel-slide"><img src="slider_mujer_2.jpg" alt="Slide 2"></div>
+                    <!-- Agrega más diapositivas aquí -->
                 </div>
-                <!-- Añadir más ofertas aquí -->
+            </div>
+            
+            <!-- Productos dispuestos horizontalmente -->
+            <div class="product-grid-horizontal">
+                <div class="product" onclick="openProductModal('Vestido de Verano', 'Vestido', '150$', ['S', 'M', 'L'], ['Rojo'], 'vestido_mujer.jpg', ['vestido_mujer.jpg'])">
+                    <img src="vestido_mujer.jpg" alt="Vestido de Verano">
+                    <h3>Vestido de Verano</h3>
+                    <p>150$</p>
+                </div>
+                <!-- Agrega más productos aquí -->
             </div>
         </section>
     </main>
     <footer>
-        <p>&copy; H&C. Todos los derechos reservados.</p>
         <nav>
             <ul>
                 <li><a href="#contacto">Contacto</a></li>
@@ -44,5 +59,26 @@
             </ul>
         </nav>
     </footer>
+
+    <!-- Modal de Producto -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProductModal()">&times;</span>
+            <img id="productImage" src="" alt="Imagen del Producto">
+            <div id="productThumbnails" class="thumbnails">
+                <!-- Miniaturas de las imágenes -->
+            </div>
+            <h2 id="productTitle"></h2>
+            <p id="productDescription"></p>
+            <p id="productPrice"></p>
+            <label for="productSize">Talla:</label>
+            <select id="productSize"></select>
+            <label for="productColor">Color:</label>
+            <select id="productColor"></select>
+            <button onclick="addToCart()">Agregar al Carrito</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>

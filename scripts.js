@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-function openProductModal(title, description, price, sizes, colors, mainImage, additionalImages) {
+function openProductModal(title, description, price, sizes, colors, mainImage, additionalImages, id) {
     const modal = document.getElementById('productModal');
     const productImage = document.getElementById('productImage');
     const productTitle = document.getElementById('productTitle');
@@ -80,6 +80,9 @@ function openProductModal(title, description, price, sizes, colors, mainImage, a
         productThumbnails.firstChild.classList.add('selected');
     }
 
+    // Store product ID in the modal
+    modal.dataset.productId = id;
+
     modal.style.display = 'flex';
 }
 
@@ -89,6 +92,31 @@ function closeProductModal() {
 }
 
 function addToCart() {
-    // Add product to cart logic
+    const modal = document.getElementById('productModal');
+    const productId = modal.dataset.productId;
+    const productTitle = document.getElementById('productTitle').textContent;
+    const productPrice = parseFloat(document.getElementById('productPrice').textContent.replace('Precio: ', '').replace('$', ''));
+    const productSize = document.getElementById('productSize').value;
+    const productColor = document.getElementById('productColor').value;
+    const quantity = 1; // Puedes ajustar la cantidad según sea necesario
+
+    const product = {
+        id: productId,
+        title: productTitle,
+        price: productPrice,
+        quantity: quantity,
+        size: productSize,
+        color: productColor,
+        image: document.getElementById('productImage').src // Asegurarse de que la imagen esté incluida
+    };
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const existingProductIndex = cart.findIndex(item => item.id === product.id);
+    if (existingProductIndex > -1) {
+        cart[existingProductIndex].quantity += quantity;
+    } else {
+        cart.push(product);
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
     alert('Producto agregado al carrito');
 }

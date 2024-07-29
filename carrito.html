@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - H&C</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo 2.png" alt="Logo de la Tienda" class="logo">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="hombre.html">Hombre</a></li>
+            <li><a href="mujer.html">Mujer</a></li>
+            <li><a href="novedades.html">Novedades</a></li>
+            <li><a href="ofertas.html">Ofertas</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Carrito de Compras</h1>
+        <div id="cartItems"></div>
+        <!-- Botón de proceder al pago oculto por defecto -->
+        <div id="checkoutButton" style="display: none;">
+            <button onclick="showCheckoutForm()">Proceder al Pago</button>
+        </div>
+
+        <!-- Formulario de Pago -->
+        <form id="checkoutForm" style="display:none;">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" required>
+
+            <label for="address">Dirección de Envío:</label>
+            <input type="text" id="address" required>
+
+            <label for="shippingMethod">Tipo de Envío:</label>
+            <select id="shippingMethod" required>
+                <option value="standard">Envío Estándar</option>
+                <option value="express">Envío Exprés</option>
+            </select>
+
+            <label for="paymentMethod">Método de Pago:</label>
+            <select id="paymentMethod" required onchange="toggleCreditCardFields()">
+                <option value="creditCard">Tarjeta de Crédito</option>
+                <option value="paypal">PayPal</option>
+            </select>
+
+            <!-- Información de la tarjeta de crédito -->
+            <div id="creditCardDetails" style="display:none;">
+                <label for="cardNumber">Número de Tarjeta:</label>
+                <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+
+                <label for="cardExpiry">Fecha de Expiración:</label>
+                <input type="text" id="cardExpiry" placeholder="MM/AA" maxlength="5" required>
+
+                <label for="cardCVC">Código de Seguridad:</label>
+                <input type="text" id="cardCVC" placeholder="123" maxlength="3" required>
+            </div>
+
+            <button type="submit">Confirmar Compra</button>
+        </form>
+
+        <!-- Mensaje de Confirmación -->
+        <div id="confirmationMessage" style="display:none;">
+            <p>¡Compra realizada con éxito!</p>
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+                <li><a href="#privacidad">Política de Privacidad</a></li>
+            </ul>
+        </nav>
+    </footer>
+    <script src="carrito.js"></script>
+    <script src="checkout.js" defer></script>
+</body>
+</html>

@@ -8,9 +8,14 @@
     <meta name="description" content="Novedades en H&C">
     <meta name="keywords" content="novedades, moda, compras">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="logi2.ico" type="image/x-icon">
+
 </head>
 <body>
     <header>
+        <a href="carrito.html" class="cart-icon">
+            <img src="carrito icon.png" alt="">
+        </a>
         <img src="logo 2.png" alt="Logo de la Tienda" class="logo">
     </header>
     <nav>
@@ -18,20 +23,30 @@
             <li><a href="index.html">Inicio</a></li>
             <li><a href="hombre.html">Hombre</a></li>
             <li><a href="mujer.html">Mujer</a></li>
+            <li><a href="novedades.html">Novedades</a></li>
             <li><a href="ofertas.html">Ofertas</a></li>
         </ul>
     </nav>
     <main class="container">
         <section class="section">
             <h2>Novedades</h2>
-            <div class="product-grid">
-                <div class="product">
-                    <img src="slider2.jpg" alt="Novedad 1">
-                    <h3>Nombre del Producto</h3>
-                    <p>Descripción del producto</p>
-                    <p>Precio</p>
+            <!-- Slider y productos -->
+            <div class="carousel">
+                <div class="carousel-wrapper">
+                    <div class="carousel-slide"><img src="slider_novedades_1.jpg" alt="Slide 1"></div>
+                    <div class="carousel-slide"><img src="slider_novedades_2.jpg" alt="Slide 2"></div>
+                    <!-- Agrega más diapositivas aquí -->
                 </div>
-                <!-- Añadir más novedades aquí -->
+            </div>
+            
+            <!-- Productos dispuestos horizontalmente -->
+            <div class="product-grid-horizontal">
+                <div class="product" onclick="openProductModal('Abrigo de Invierno', 'Abrigo', '200$', ['S', 'M', 'L'], ['Gris'], 'abrigo_novedades.jpg', ['abrigo_novedades.jpg'])">
+                    <img src="abrigo_novedades.jpg" alt="Abrigo de Invierno">
+                    <h3>Abrigo de Invierno</h3>
+                    <p>200$</p>
+                </div>
+                <!-- Agrega más productos aquí -->
             </div>
         </section>
     </main>
@@ -44,5 +59,26 @@
             </ul>
         </nav>
     </footer>
+
+    <!-- Modal de Producto -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProductModal()">&times;</span>
+            <img id="productImage" src="" alt="Imagen del Producto">
+            <div id="productThumbnails" class="thumbnails">
+                <!-- Miniaturas de las imágenes -->
+            </div>
+            <h2 id="productTitle"></h2>
+            <p id="productDescription"></p>
+            <p id="productPrice"></p>
+            <label for="productSize">Talla:</label>
+            <select id="productSize"></select>
+            <label for="productColor">Color:</label>
+            <select id="productColor"></select>
+            <button onclick="addToCart()">Agregar al Carrito</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
