@@ -463,7 +463,7 @@ label {
     justify-content: space-between;
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #070303;
     border-radius: 8px;
 }
 
@@ -473,11 +473,12 @@ label {
     margin-right: 10px;
 }
 
+
 #checkoutForm {
     background-color: #fff;
-    padding: 20px;
+    padding: 30px;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 30px;
 }
 
 #checkoutForm label {
@@ -487,15 +488,16 @@ label {
 
 #checkoutForm input, 
 #checkoutForm select {
-    width: 100%;
+    width: 99%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 6px;
+    
 }
 
 #checkoutForm button {
-    background-color: #626970;
+    background-color: #788ea3;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -503,10 +505,21 @@ label {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
+    
+    
+}
+#checkoutButtonContainer {
+    margin: 10px 0;
+    text-align: center;
+}
+
+#checkoutButton {
+    padding: 10px 20px;
 }
 
 #checkoutForm button:hover {
     background-color: #bdbdbd;
+  
 }
 
 #confirmationMessage {
@@ -515,7 +528,11 @@ label {
     border: 1px solid #d0e0d0;
     border-radius: 8px;
 }
-
+#totalAmount {
+  text-align: center;
+    font-size: 1.5em;
+    margin: 20px 0;
+}
 /* Estilo para el icono del carrito */
 .cart-icon {
     position: absolute;
@@ -661,3 +678,7 @@ footer {
     }
 }
 
+h1 {
+text-align: center;
+
+}

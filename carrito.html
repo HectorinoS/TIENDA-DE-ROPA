@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="logi2.ico" type="image/x-icon">
 </head>
-<body class="cart-page">
+<body>
     <header>
         <img src="logo 2.png" alt="Logo de la Tienda" class="logo">
     </header>
@@ -20,14 +20,19 @@
             <li><a href="ofertas.html">Ofertas</a></li>
         </ul>
     </nav>
+   
+        <h1>CARRITO DE COMPRAS</h1>
+        <div id="cartItems">
+            <!-- Los productos se insertarán aquí dinámicamente con JavaScript -->
+        </div>
         
-        <div id="cartItems"></div>
-        
+        <div id="totalAmount">TOTAL: $0.00</div>
+    
     
         <div id="checkoutButtonContainer" style="display: none;">
             <button id="checkoutButton" onclick="showCheckoutForm()">Proceder al Pago</button>
         </div>
-    
+    <main>
         <!-- Formulario de Pago -->
         <form id="checkoutForm" style="display:none;" onsubmit="proceedToCheckout(); return false;">
             <label for="name">Nombre:</label>
