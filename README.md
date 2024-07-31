@@ -80,6 +80,8 @@ A continuación se presentan algunas capturas de pantalla de la tienda:
 ![Captura de Pantalla 1](CAPTURA3.png)
 
 ![Captura de Pantalla 1](CAPTURA4.png)
+
+![Captura de Pantalla 1](CAPTURA5.png)
 ## Créditos
 
 Este proyecto fue desarrollado por [Hector FlamintHot/Citlalli Z] como parte de un proyecto personal/educativo. Agradecimientos especiales a [Andres Luna (Profesor Software).
@@ -97,5 +99,5 @@ Este proyecto fue desarrollado por [Hector FlamintHot/Citlalli Z] como parte de 
 - [ ] Implementar funcionalidad de búsqueda.
 - [ ] Añadir más categorías de productos.
 - [ ] Mejorar la experiencia del usuario en dispositivos móviles.
-- [ ] Integrar pasarela de pago.
+
 
