@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>H&C</title>
+    <title>Ropa para Hombre - H&C</title>
     <link rel="stylesheet" href="styles.css">
-    <meta name="description" content="Tienda de ropa con las mejores prendas para hombre y mujer">
-    <meta name="keywords" content="tienda de ropa, moda, hombre, mujer, compras">
+    <meta name="description" content="Ropa para hombre en H&C">
+    <meta name="keywords" content="ropa para hombre, moda, hombre, compras">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" href="logi2.ico" type="image/x-icon">
 </head>
 <body>
+    <header>
+        <a href="carrito.html" class="cart-icon">
+            <img src="carrito icon.png" alt="">
+        </a>
+        <img src="logo 2.png" alt="Logo de la Tienda" class="logo">
+    </header>
     <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
@@ -20,31 +26,84 @@
             <li><a href="ofertas.html">Ofertas</a></li>
         </ul>
     </nav>
-    <main class="container">
-        <section id="hombre" class="section">
-            <h2>Ropa para Hombre</h2>
-            <div class="product-grid">
-                <div class="product">
-                    <a href="hombre.html">
-                        <img src="slider.jpg" alt="Producto Hombre 1">
-                    </a>
-                </div>
-            </div>
-        </section>
-        <section id="mujer" class="section">
-            <h2>Ropa para Mujer</h2>
-            <div class="product-grid">
-                <div class="product">
-                    <a href="mujer.html">
-                    <img src="slider 4.jpg" alt="Producto Mujer 1">
-                    </a>
-                </div>
+    <main>
+        <div class="image-container">
             <div class="image-item">
-                <h2>Título 4</h2>
-                <a href="pagina4.html"><img src="imagen4.jpg" alt="Imagen 4"></a>
+                <h2>MODA QUE TE DEFINE</h2>
+                <a href="hombre.html"><img src="slider.jpg" alt="Imagen 1"></a>
+            </div>
+            <div class="image-item">
+                <h2>ESTILO PARA CADA OCASIÓN</h2>
+                <a href="mujer.html"><img src="slider 4.jpg" alt="Imagen 2"></a>
+            </div>
+            <div class="image-item">
+                <h2>REFLEJA TU BELLEZA INTERIOR</h2>
+                <a href="novedades.html"><img src="slider 2.jpg" alt="Imagen 3"></a>
+            </div>
+            <div class="image-item">
+                <h2>COMODIDAD Y ELEGANCIA</h2>
+                <a href="ofertas.html"><img src="slader 1.jpg" alt="Imagen 4"></a>
             </div>
         </div>
     </main>
+        <main class="container">
+        <section class="section">
+        <!-- Productos dispuestos horizontalmente -->
+        <div class="product-grid-horizontal">
+            <div class="product" onclick="openProductModal('AE 24/7 T-shirt con Gráfico', 'Camisa', '250$', ['S', 'M', 'L'], ['NEGRO'], 'playera hombre.jpg', ['playera hombre.jpg'], 1)">
+                <img src="playera hombre.jpg" alt="Producto Hombre 1">
+                <h3>AE 24/7 T-shirt con Gráfico</h3>
+                <p>250$</p>
+            </div>
+
+            <div class="product" onclick="openProductModal('Nike Air Force 1 Le Gs Triple White', 'Tenis', '1500$', ['8', '9', '10'], ['BLANCO'], 'tenis hombre.jpg', ['tenis hombre.jpg', 'tenis hombre1.2.jpg', 'tenis hombre1.jpg'], 2)">
+                <img src="tenis hombre.jpg" alt="Producto Hombre 2">
+                <h3>Tenis Nike Air Force 1 Le Gs Triple White</h3>
+                <p>$1,500</p>
+            </div>
+
+            <div class="product" onclick="openProductModal('BOMBER CON BORDADO CALAVERA NEGRA', 'Chamarra', '500$', ['S', 'M', 'L'], ['NEGRO'], 'chamarra hombre.jpg', ['chamarra hombre.jpg'], 3)">
+                <img src="chamarra hombre.jpg" alt="Producto Hombre 3">
+                <h3>BOMBER CON BORDADO CALAVERA NEGRA</h3>
+                <p>500$</p>
+            </div>
+
+            <div class="product" onclick="openProductModal('Adidas Classic Solid 3 Pares', 'Calcetas', '300$', ['CH', 'M', 'G'], ['BLANCO'], 'calcetas hombre.jpg', ['calcetas hombre.jpg', 'calcetas hombre1.jpg', 'calcetas hombre2.jpg'], 4)">
+                <img src="calcetas hombre.jpg" alt="Producto Hombre 4">
+                <h3>Calcetines Adidas Classic Solid 3 Pares</h3>
+                <p>300$</p>
+            </div>
+
+            <div class="product" onclick="openProductModal('nike court vision alta', 'Tenis', '1250$', ['3', '4', '5'], ['BLANCO'], 'tennis mujer.png', ['tennis mujer.png','tennis mujer 2.png','tennis mujer 3.png'], 1)">
+                <img src="tennis mujer.png" alt="Producto mujer 1">
+                <h3>Tenis nike court vision alta</h3>
+                <p>1250$</p>
+            </div>
+            
+            <div class="product" onclick="openProductModal('Tipo Lápiz De Trabajo', 'Vestido', '450$', ['S', 'M', 'G'], ['ROSA'], 'vestido.jpg', ['vestido.jpg','vestido 2.jpg','vestido 3.jpg'], 1)">
+                <img src="vestido.jpg" alt="Producto mujer 1">
+                <h3>Vestido Tipo Lápiz De Trabajo </h3>
+                <p>450$</p>
+            </div>
+
+            <div class="product" onclick="openProductModal('adidas Entrenamiento Techfit', 'Short', '500$', ['S', 'M', 'G'], ['NEGRO'], 'shmujer.jpg', ['shmujer.jpg','shmujer1.jpg','shmujer2.jpg'], 1)">
+                <img src="shmujer.jpg" alt="Producto mujer 1">
+                <h3>Short adidas Entrenamiento Techfit </h3>
+                <p>500$</p>
+            </div>
+
+            <div class="product" onclick="openProductModal('Blanca Con Monograma Calvin Klein', 'Camisa', '1699$', ['S', 'M', 'G'], ['BLANCA'], 'camujer.jpg', ['camujer.jpg','camujer2.jpg','camujer3.jpg'], 1)">
+                <img src="camujer.jpg" alt="Producto mujer 1">
+                <h3>Camisa Blanca Con Monograma Calvin Klein </h3>
+                <p>$ 1,699</p>
+            </div>
+
+            
+            <!-- Agrega más productos aquí -->
+        </div>
+    </section>
+</main>
+    <!-- Pie de página -->
     <footer>
         <nav>
             <ul>
@@ -54,5 +113,26 @@
             </ul>
         </nav>
     </footer>
+     <!-- Modal de Producto -->
+     <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProductModal()">&times;</span>
+            <img id="productImage" src="" alt="Imagen del Producto">
+            <div id="productThumbnails" class="thumbnails">
+                <!-- Miniaturas de las imágenes -->
+            </div>
+            <h2 id="productTitle"></h2>
+            <p id="productDescription"></p>
+            <p id="productPrice"></p>
+            <label for="productSize">Talla:</label>
+            <select id="productSize"></select>
+            <label for="productColor">Color:</label>
+            <select id="productColor"></select>
+            <button onclick="addToCart()">Agregar al Carrito</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
+
 </html>

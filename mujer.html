@@ -33,52 +33,97 @@
             <!-- Slider y productos -->
             <div class="carousel">
                 <div class="carousel-wrapper">
-                    <div class="carousel-slide"><img src="slider_mujer_1.jpg" alt="Slide 1"></div>
-                    <div class="carousel-slide"><img src="slider_mujer_2.jpg" alt="Slide 2"></div>
+                    <div class="carousel-slide"><img src="slider mujer.jpg" alt="Slide 1"></div>
+                    <div class="carousel-slide"><img src="slider mujer 3.jpg" alt="Slide 2"></div>
                     <!-- Agrega más diapositivas aquí -->
                 </div>
             </div>
             
             <!-- Productos dispuestos horizontalmente -->
             <div class="product-grid-horizontal">
-                <div class="product" onclick="openProductModal('Vestido de Verano', 'Vestido', '150$', ['S', 'M', 'L'], ['Rojo'], 'vestido_mujer.jpg', ['vestido_mujer.jpg'])">
-                    <img src="vestido_mujer.jpg" alt="Vestido de Verano">
-                    <h3>Vestido de Verano</h3>
-                    <p>150$</p>
+                <div class="product" onclick="openProductModal('nike court vision alta', 'Tenis', '1250$', ['3', '4', '5'], ['BLANCO'], 'tennis mujer.png', ['tennis mujer.png','tennis mujer 2.png','tennis mujer 3.png'], 1)">
+                    <img src="tennis mujer.png" alt="Producto mujer 1">
+                    <h3>Tenis nike court vision alta</h3>
+                    <p>1250$</p>
+                </div>
+                
+                <div class="product" onclick="openProductModal('Tipo Lápiz De Trabajo', 'Vestido', '450$', ['S', 'M', 'G'], ['ROSA'], 'vestido.jpg', ['vestido.jpg','vestido 2.jpg','vestido 3.jpg'], 1)">
+                    <img src="vestido.jpg" alt="Producto mujer 1">
+                    <h3>Vestido Tipo Lápiz De Trabajo </h3>
+                    <p>450$</p>
+                </div>
+
+                <div class="product" onclick="openProductModal('adidas Entrenamiento Techfit', 'Short', '500$', ['S', 'M', 'G'], ['NEGRO'], 'shmujer.jpg', ['shmujer.jpg','shmujer1.jpg','shmujer2.jpg'], 1)">
+                    <img src="shmujer.jpg" alt="Producto mujer 1">
+                    <h3>Short adidas Entrenamiento Techfit </h3>
+                    <p>500$</p>
+                </div>
+
+                <div class="product" onclick="openProductModal('Blanca Con Monograma Calvin Klein', 'Camisa', '1699$', ['S', 'M', 'G'], ['BLANCA'], 'camujer.jpg', ['camujer.jpg','camujer2.jpg','camujer3.jpg'], 1)">
+                    <img src="camujer.jpg" alt="Producto mujer 1">
+                    <h3>Camisa Blanca Con Monograma Calvin Klein </h3>
+                    <p>$ 1,699</p>
+                </div>
+                <div class="product" onclick="openProductModal('nike court vision alta', 'Tenis', '1250$', ['3', '4', '5'], ['BLANCO'], 'tennis mujer.png', ['tennis mujer.png','tennis mujer 2.png','tennis mujer 3.png'], 1)">
+                    <img src="tennis mujer.png" alt="Producto mujer 1">
+                    <h3>Tenis nike court vision alta</h3>
+                    <p>1250$</p>
+                </div>
+                
+                <div class="product" onclick="openProductModal('Tipo Lápiz De Trabajo', 'Vestido', '450$', ['S', 'M', 'G'], ['ROSA'], 'vestido.jpg', ['vestido.jpg','vestido 2.jpg','vestido 3.jpg'], 1)">
+                    <img src="vestido.jpg" alt="Producto mujer 1">
+                    <h3>Vestido Tipo Lápiz De Trabajo </h3>
+                    <p>450$</p>
+                </div>
+
+                <div class="product" onclick="openProductModal('adidas Entrenamiento Techfit', 'Short', '500$', ['S', 'M', 'G'], ['NEGRO'], 'shmujer.jpg', ['shmujer.jpg','shmujer1.jpg','shmujer2.jpg'], 1)">
+                    <img src="shmujer.jpg" alt="Producto mujer 1">
+                    <h3>Short adidas Entrenamiento Techfit </h3>
+                    <p>500$</p>
+                </div>
+
+                <div class="product" onclick="openProductModal('Blanca Con Monograma Calvin Klein', 'Camisa', '1699$', ['S', 'M', 'G'], ['BLANCA'], 'camujer.jpg', ['camujer.jpg','camujer2.jpg','camujer3.jpg'], 1)">
+                    <img src="camujer.jpg" alt="Producto mujer 1">
+                    <h3>Camisa Blanca Con Monograma Calvin Klein </h3>
+                    <p>$ 1,699</p>
                 </div>
                 <!-- Agrega más productos aquí -->
             </div>
         </section>
     </main>
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-                <li><a href="#privacidad">Política de Privacidad</a></li>
-            </ul>
-        </nav>
-    </footer>
+    <!-- Mensaje de Producto Agregado -->
+<div id="notification" class="notification" style="display: none;">Producto agregado al carrito</div>
 
-    <!-- Modal de Producto -->
-    <div id="productModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeProductModal()">&times;</span>
-            <img id="productImage" src="" alt="Imagen del Producto">
-            <div id="productThumbnails" class="thumbnails">
-                <!-- Miniaturas de las imágenes -->
-            </div>
-            <h2 id="productTitle"></h2>
-            <p id="productDescription"></p>
-            <p id="productPrice"></p>
-            <label for="productSize">Talla:</label>
-            <select id="productSize"></select>
-            <label for="productColor">Color:</label>
-            <select id="productColor"></select>
-            <button onclick="addToCart()">Agregar al Carrito</button>
+<!-- Pie de página -->
+<footer>
+    <nav>
+        <ul>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+            <li><a href="#privacidad">Política de Privacidad</a></li>
+        </ul>
+    </nav>
+</footer>
+
+<!-- Modal de Producto -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeProductModal()">&times;</span>
+        <img id="productImage" src="" alt="Imagen del Producto">
+        <div id="productThumbnails" class="thumbnails">
+            <!-- Miniaturas de las imágenes -->
         </div>
+        <h2 id="productTitle"></h2>
+        <p id="productDescription"></p>
+        <p id="productPrice"></p>
+        <label for="productSize">Talla:</label>
+        <select id="productSize"></select>
+        <label for="productColor">Color:</label>
+        <select id="productColor"></select>
+        <button onclick="addToCart()">Agregar al Carrito</button>
     </div>
+</div>
 
-    <script src="scripts.js"></script>
+<script src="scripts.js"></script>
 </body>
 </html>

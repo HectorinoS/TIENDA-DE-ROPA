@@ -33,52 +33,74 @@
             <!-- Slider y productos -->
             <div class="carousel">
                 <div class="carousel-wrapper">
-                    <div class="carousel-slide"><img src="slider_mujer_1.jpg" alt="Slide 1"></div>
-                    <div class="carousel-slide"><img src="slider_mujer_2.jpg" alt="Slide 2"></div>
+                    <div class="carousel-slide"><img src="slider nov.jpg" alt="Slide 1"></div>
+                    <div class="carousel-slide"><img src="slider nov2.jpg" alt="Slide 2"></div>
                     <!-- Agrega más diapositivas aquí -->
                 </div>
             </div>
             
             <!-- Productos dispuestos horizontalmente -->
             <div class="product-grid-horizontal">
-                <div class="product" onclick="openProductModal('Vestido de Verano', 'Vestido', '150$', ['S', 'M', 'L'], ['Rojo'], 'vestido_mujer.jpg', ['vestido_mujer.jpg'])">
-                    <img src="vestido_mujer.jpg" alt="Vestido de Verano">
-                    <h3>Vestido de Verano</h3>
-                    <p>150$</p>
+                <div class="product" onclick="openProductModal('Montana West - Mochila pequeña para mujer, antirrobo, con cierre segura y borla', 'Vestido', '643.69$', ['UNITALLA'], ['AZUL'], 'bolso of.jpg', ['bolso of.jpg','bolso of1.1.jpg','bolso of1.2.jpg'])">
+                    <img src="bolso of.jpg" alt="Vestido de Verano">
+                    <h3>Montana West - Mochila pequeña para mujer</h3>
+                    <p>643.69$</p>
                 </div>
+                
+                    <div class="product" onclick="openProductModal('Beau Today - Tenis gruesos para mujer, con plataforma, zapatos de papá con cordones', 'Vestido', '1,338.41$', ['23', '26', '24'], ['CAFE'], 'tenis of.jpg', ['tenis of.jpg','tenis of1.1.jpg','tenis of1.2.jpg'])">
+                        <img src="tenis of.jpg" alt="Vestido de Verano">
+                        <h3>Beau Today - Tenis gruesos para mujer</h3>
+                        <p>1,338.41$</p>
+                    </div>
+                    
+                        <div class="product" onclick="openProductModal('Running Home Vestido De Mujer De Corte Holgado En Lino Y Algodón, Vestido Camisero De Manga 3/4 Vestido Informal Suelto con Botones Y Bolsillos', 'Vestido', '752.22$', ['S', 'M', 'L'], ['ROSA','AZUL'], 'vest2.jpg', ['vest2.jpg'])">
+                            <img src="vest2.jpg" alt="Vestido de Verano">
+                            <h3>Running Home Vestido De Mujer </h3>
+                            <p>752.22$</p>
+                        </div>
+                      
+                            <div class="product" onclick="openProductModal('Conjunto de Suéter de Punto de 2 Piezas para Mujer, Manga Corta, sin Potones, Cintura Elástica, Pierna Ancha, Pantalones de Descanso', 'Vestido', '752.22$', ['S', 'M', 'L'], ['CAFE','AZUL','NEGRO'], 'conjunto.jpg', ['conjunto.jpg'])">
+                                <img src="conjunto.jpg" alt="Vestido de Verano">
+                                <h3>Conjunto de Suéter de Punto de 2 Piezas para Mujer</h3>
+                                <p>752.22$</p>
+                            </div>
                 <!-- Agrega más productos aquí -->
             </div>
         </section>
     </main>
-    <footer>
-        <nav>
-            <ul>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
-                <li><a href="#privacidad">Política de Privacidad</a></li>
-            </ul>
-        </nav>
-    </footer>
+    <!-- Mensaje de Producto Agregado -->
+<div id="notification" class="notification" style="display: none;">Producto agregado al carrito</div>
 
-    <!-- Modal de Producto -->
-    <div id="productModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeProductModal()">&times;</span>
-            <img id="productImage" src="" alt="Imagen del Producto">
-            <div id="productThumbnails" class="thumbnails">
-                <!-- Miniaturas de las imágenes -->
-            </div>
-            <h2 id="productTitle"></h2>
-            <p id="productDescription"></p>
-            <p id="productPrice"></p>
-            <label for="productSize">Talla:</label>
-            <select id="productSize"></select>
-            <label for="productColor">Color:</label>
-            <select id="productColor"></select>
-            <button onclick="addToCart()">Agregar al Carrito</button>
+<!-- Pie de página -->
+<footer>
+    <nav>
+        <ul>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+            <li><a href="#privacidad">Política de Privacidad</a></li>
+        </ul>
+    </nav>
+</footer>
+
+<!-- Modal de Producto -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeProductModal()">&times;</span>
+        <img id="productImage" src="" alt="Imagen del Producto">
+        <div id="productThumbnails" class="thumbnails">
+            <!-- Miniaturas de las imágenes -->
         </div>
+        <h2 id="productTitle"></h2>
+        <p id="productDescription"></p>
+        <p id="productPrice"></p>
+        <label for="productSize">Talla:</label>
+        <select id="productSize"></select>
+        <label for="productColor">Color:</label>
+        <select id="productColor"></select>
+        <button onclick="addToCart()">Agregar al Carrito</button>
     </div>
+</div>
 
-    <script src="scripts.js"></script>
+<script src="scripts.js"></script>
 </body>
 </html>
