@@ -72,15 +72,15 @@ For any questions, you can contact us at (terracraftelcrack@gmail.com).
 
 Below are some screenshots of the store:
 
-![Screenshot 1](SCREENPLAY1.png)
+![Screenshot 1](CAPTURA1.png)
 
-![Screenshot 1](SCREENPLAY2.png)
+![Screenshot 1](CAPTURA2.png)
 
-![Screenshot 1](SCREENPLAY3.png)
+![Screenshot 1](CAPTURA3.png)
 
-![Screenshot 1](SCREENPLAY4.png)
+![Screenshot 1](CAPTURA4.png)
 
-![Screenshot 1](SCREENPLAY5.png)
+![Screenshot 1](CAPTURA5.png)
 ## Credits
 
 This project was developed by [Hector FlamintHot/Citlalli Z] as part of a personal/educational project. Special thanks to [Andres Luna (Software Teacher).
